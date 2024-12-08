@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Serif:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+    background-color: #6894A1;
+    font-family: Roboto Serif; 
+}
+
+section {
+    padding-top: 30px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #283347;
+}
+
+.main a {
+    text-decoration: none;
+}
+
+.text-stih {
+    padding-top: 50px;
+    text-indent: 15px;
+}
+
+.navbar-light {
+    background-color: #283347;
+    color: #C3B59B;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-brand p {    
+    color: #C3B59B; 
+    font-family: Roboto Serif; 
+    font-weight: 900;
+    font-size: 28;
+    line-height: 31px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border-left: 3px solid #C3B59B;
+    padding-left: 10px;
+    margin-bottom: 0;
+}
+
+.title h3 {    
+    font-weight: 900;
+    font-size: 30px;
+    margin: 0;
+}
+
+.text p {    
+    font-size: 18px;
+    font-weight: 500;
+}
