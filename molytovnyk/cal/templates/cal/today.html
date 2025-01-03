@@ -1,0 +1,39 @@
+{% extends 'layout/basic.html' %}
+
+{% block content %}
+<div class="title">
+    <h3>Сьогодні {{ today }} святкуємо:</h3>
+</div>
+
+{% if holiday %}
+    <div class="bor">
+        <div class="text">
+            <p>{{ holiday.name }}</p>
+        </div>
+        <div class="text">
+            <p>{{ holiday.description }}</p>
+        </div>
+    </div>
+{% else %}
+    <div class="text">
+        <p>... нажаль на сьогодні свят не передбачено</p>
+    </div>
+{% endif %}
+
+<hr>
+
+<div class="title">
+    <h3>Очікуємо найближчі свята</h3>
+</div>
+
+{% if next_holidays %}
+    <ul>
+        {% for holiday in next_holidays %}
+            <li><strong>{{ holiday.date }}</strong> — {{ holiday.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Нет ближайших праздников.</p>
+{% endif %}
+
+{% endblock content %}
