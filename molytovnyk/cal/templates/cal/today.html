@@ -1,5 +1,11 @@
 {% extends 'layout/basic.html' %}
 
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'cal/style.css' %}">
+{% endblock styles %}
+
 {% block content %}
 <div class="title">
     <h3>Сьогодні {{ today }} святкуємо:</h3>
@@ -16,7 +22,7 @@
     </div>
 {% else %}
     <div class="text">
-        <p>... нажаль на сьогодні свят не передбачено</p>
+        <p>Сьогодні нічого не святкуємо</p>
     </div>
 {% endif %}
 

@@ -14,12 +14,12 @@ class Holiday(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Дата останнього оновлення")
 
 
-    def should_announce(self):
-        """
-        Перевіряє чи потрібно анонсувати свято за день до його настання
-        """
-        today = date.today()
-        return today == self.date - timedelta(days=1)
+    # def should_announce(self):
+    #     """
+    #     Перевіряє чи потрібно анонсувати свято за день до його настання
+    #     """
+    #     today = date.today()
+    #     return today == self.date - timedelta(days=1)
 
     class Meta:
         verbose_name = "Свято"
