@@ -32,7 +32,7 @@
 <body>
   
   <!-- <nav class="navbar navbar-light justify-content-center">
-    <a class="navbar-brand d-flex" href="{% url 'texty:index' %}">
+    <a class="navbar-brand d-flex" href="#">
       <img src="{% static 'images/logo.png' %}" width="37" height="60" alt="">
       <p>слава <br>
         ісусу христу</p>
@@ -49,7 +49,7 @@
   </nav> -->
 
   <nav class="navbar navbar-expand-lg navbar-light jcustom-navbar">
-    <a class="navbar-brand d-flex" href="{% url 'texty:index' %}">
+    <a class="navbar-brand d-flex" href="#">
       <img src="{% static 'images/logo.png' %}" width="37" height="60" alt="">
       <p>слава <br>
         ісусу христу</p>
@@ -59,11 +59,14 @@
     </button>  
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav text-center">
-        <li class="nav-item {% if request.resolver_match.url_name == 'index' and request.resolver_match.app_name == 'texty' %}active{% endif %}"">
-          <a class="nav-link" href="{% url 'texty:index' %}">Молитви <span class="sr-only">(current)</span></a>
+        <li class="nav-item {% if request.resolver_match.url_name == 'prayer_list' and request.resolver_match.app_name == 'texty' %}active{% endif %}"">
+          <a class="nav-link" href="{% url 'texty:prayer_list' %}">Молитви <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item {% if request.resolver_match.url_name == 'today_holiday' and request.resolver_match.app_name == 'cal' %}active{% endif %}">
           <a class="nav-link" href="{% url 'cal:today_holiday' %}">Свята</a>
+        </li>
+        <li class="nav-item {% if request.resolver_match.url_name == 'admin:index' %}active{% endif %}">
+          <a class="nav-link" href="{% url 'admin:index' %}">Вхід</a>
         </li>
       </ul>
     </div>

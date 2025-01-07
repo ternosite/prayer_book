@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from texty.views import PrayerListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('texty', include('texty.urls')),
+    path('texty/', include('texty.urls')),
     path('cal/', include('cal.urls')),
+    path('', PrayerListView.as_view(), name='home'),
 ]

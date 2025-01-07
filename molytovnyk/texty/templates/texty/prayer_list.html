@@ -1,0 +1,23 @@
+{% extends 'layout/basic.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1>список молитов</h1>
+
+<ul>
+    {% for prayer in prayers %}
+
+    <h2>{{ prayer.name }}</h2>
+    <p>{{ prayer.text|linebreaks|truncatechars:30 }}</p>
+    
+    {% empty %}
+
+    <p>немає молитов для відображення</p>
+     
+    {% endfor %}
+</ul>
+
+{% endblock content %}
+
