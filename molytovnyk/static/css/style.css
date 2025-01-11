@@ -55,6 +55,52 @@ a {
     margin-bottom: 0;
 }
 
+.btn-outline-custom {
+    background-color: transparent;
+    color: #283347;
+    border: 2px solid #283347;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 170px;
+  }
+  
+  .btn-outline-custom:hover {
+    background-color: #283347;
+    color: #6894A1;
+    border: 2px solid #283347;
+  }
+  
+  .btn-form {
+    margin-bottom: 5px;
+  }
+  
+  /* Стили для текстовых полей */
+  .form-control {
+    background-color: #6894A1; /* Цвет фона */
+    border: 2px solid #283347; /* Граница */
+    color: #283347; /* Цвет текста */
+    border-radius: 5px; /* Закруглённые углы (по желанию) */
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+  }
+  
+  /* Стили при фокусе на поле */
+  .form-control:focus {
+    background-color: #6894A1;
+    outline: none;
+    border-color: #283347; /* Цвет границы при фокусе */
+    box-shadow: 0 5px 15px rgba(40, 51, 71, 0.5); /* Эффект свечения */
+    color: #283347;
+  }
+  
+  /* Стили для плейсхолдера */
+  .form-control::placeholder {
+    color: #283347; /* Цвет текста плейсхолдера */
+    opacity: 0.8; /* Прозрачность */
+  }
+
 
 /* медиа запросы */
 

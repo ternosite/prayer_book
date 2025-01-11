@@ -8,13 +8,14 @@ from django.views.generic import ListView
 from .models import Prayer
 from django.shortcuts import render, redirect
 from .forms import PrayerForm
+from django.contrib.auth.decorators import login_required
 
 class PrayerListView(ListView):
     model = Prayer
     template_name = 'texty/prayer_list.html'
     context_object_name = 'prayers'
 
-
+@login_required
 def add_prayer(request):
     if request.method == 'POST':
         form = PrayerForm(request.POST)
