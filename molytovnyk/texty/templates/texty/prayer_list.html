@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'texty/style.css' %}">
+{% endblock styles %}
+
 {% block content %}
 
 <h1>список молитов</h1>
@@ -18,6 +22,9 @@
      
     {% endfor %}
 </ul>
+
+<a href="{% url 'texty:add_prayer' %}" class="btn btn-outline-success btn-outline-custom">додати молитву</a>
+<!-- <a href="{% url 'texty:add_prayer' %}" class="element element-1">додати молитву</a> -->
 
 {% endblock content %}
 

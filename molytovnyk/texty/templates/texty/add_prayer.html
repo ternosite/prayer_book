@@ -1,0 +1,20 @@
+{% extends 'layout/basic.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'texty/style.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+<h2>Додати молитву</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-form btn-primery btn-outline-custom">Зберегти</button>
+</form>
+<a href="{% url 'texty:prayer_list' %} " class="btn btn-primery btn-outline-custom">назад до списку</a>
+
+{% endblock content %}
