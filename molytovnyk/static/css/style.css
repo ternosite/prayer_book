@@ -1,21 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Serif:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #6894A1;
-    font-family: Roboto Serif; 
+    font-family: Roboto Serif;
     color: #283347;
 }
 
 ul {
     list-style: none;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    color: #283347;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .custom-navbar a .nav-link {
@@ -42,9 +50,9 @@ a {
     margin-right: 10px;
 }
 
-.navbar-brand p {    
-    color: #C3B59B; 
-    font-family: Roboto Serif; 
+.navbar-brand p {
+    color: #C3B59B;
+    font-family: Roboto Serif;
     font-weight: 900;
     font-size: 28;
     line-height: 31px;
@@ -64,61 +72,85 @@ a {
     text-decoration: none;
     display: inline-block;
     width: 170px;
-  }
-  
-  .btn-outline-custom:hover {
+}
+
+.btn-outline-custom:hover {
     background-color: #283347;
     color: #6894A1;
     border: 2px solid #283347;
-  }
-  
-  .btn-form {
+}
+
+.btn-form {
     margin-bottom: 5px;
-  }
-  
-  /* Стили для текстовых полей */
-  .form-control {
-    background-color: #6894A1; /* Цвет фона */
-    border: 2px solid #283347; /* Граница */
-    color: #283347; /* Цвет текста */
-    border-radius: 5px; /* Закруглённые углы (по желанию) */
-    padding: 10px; /* Внутренние отступы */
-    font-size: 16px; /* Размер текста */
-  }
-  
-  /* Стили при фокусе на поле */
-  .form-control:focus {
+}
+
+/* Стили для текстовых полей */
+
+.form-container {
+    max-width: 600px;
+    /* Максимальна ширина форми */
+    margin: 0 auto;
+    /* Вирівнювання по центру */
+    padding: 20px;
+    /* Внутрішні відступи */
+    -background-color: #f9f9f9;
+    /* Фоновий колір (за бажанням) */
+    -border: 2px solid #283347;
+    /* Граница */
+    -border-radius: 10px;
+    /* Закруглені кути */
+    -box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Тінь */
+}
+
+.form-control {
+    background-color: #6894A1;
+    /* Цвет фона */
+    border: 2px solid #283347;
+    /* Граница */
+    color: #283347;
+    /* Цвет текста */
+    border-radius: 5px;
+    /* Закруглённые углы (по желанию) */
+    padding: 10px;
+    /* Внутренние отступы */
+    font-size: 16px;
+    /* Размер текста */
+}
+
+/* Стили при фокусе на поле */
+.form-control:focus {
     background-color: #6894A1;
     outline: none;
-    border-color: #283347; /* Цвет границы при фокусе */
-    box-shadow: 0 5px 15px rgba(40, 51, 71, 0.5); /* Эффект свечения */
+    border-color: #283347;
+    /* Цвет границы при фокусе */
+    box-shadow: 0 5px 15px rgba(40, 51, 71, 0.5);
+    /* Эффект свечения */
     color: #283347;
-  }
-  
-  /* Стили для плейсхолдера */
-  .form-control::placeholder {
-    color: #283347; /* Цвет текста плейсхолдера */
-    opacity: 0.8; /* Прозрачность */
-  }
+}
+
+/* Стили для плейсхолдера */
+.form-control::placeholder {
+    color: #283347;
+    /* Цвет текста плейсхолдера */
+    opacity: 0.8;
+    /* Прозрачность */
+}
 
 
 /* медиа запросы */
 
-@media(max-width: 1200px) {
-
-}
+@media(max-width: 1200px) {}
 
 @media(max-width: 768px) {
-    .title h3 { 
+    .title h3 {
         margin-left: 0px;
         text-align: center;
     }
 
-    .text p {   
+    .text p {
         margin-left: 0px;
     }
 }
 
-@media(max-width: 520px) {
-
-}
+@media(max-width: 520px) {}

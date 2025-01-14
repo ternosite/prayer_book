@@ -8,13 +8,17 @@
 
 {% block content %}
 
-<h2>Додати молитву</h2>
+<div class="form-container">
+    <h2>Додати молитву</h2>
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-form btn-primery btn-outline-custom">Зберегти</button>
-</form>
-<a href="{% url 'texty:prayer_list' %} " class="btn btn-primery btn-outline-custom">назад до списку</a>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-form btn-primery btn-outline-custom">Зберегти</button>
+    </form>
+    <a href="{% url 'texty:prayer_list' %} " class="btn btn-primery btn-outline-custom">назад до списку</a>
+</div>
+
+
 
 {% endblock content %}

@@ -8,13 +8,17 @@
 
 {% block content %}
 
-<h2>Додати нове свято</h2>
+<div class="form-container">
+    <h2>Додати нове свято</h2>
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-form btn-primery btn-outline-custom">Зберегти</button>
-</form>
-<a href="{% url 'cal:today_holiday' %} " class="btn btn-primery btn-outline-custom">назад до свят</a>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-form btn-primery btn-outline-custom">Зберегти</button>
+    </form>
+    <a href="{% url 'cal:today_holiday' %} " class="btn btn-primery btn-outline-custom">назад до свят</a>
+</div>
+
+
 
 {% endblock content %}

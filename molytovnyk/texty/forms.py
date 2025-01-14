@@ -13,3 +13,8 @@ class PrayerForm(forms.ModelForm):
             'name': 'Назва', 
             'text': 'Текст', 
         }
+        error_messages = {
+            'name': {
+                'required': 'Поле "Назва молитви" є обов’язковим.',
+            },
+        }
