@@ -38,8 +38,9 @@
       <p>слава <br>
         ісусу христу</p>
     </a>
-    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -52,23 +53,27 @@
           class="nav-item {% if request.resolver_match.url_name == 'today_holiday' and request.resolver_match.app_name == 'cal' %}active{% endif %}">
           <a class="nav-link" href="{% url 'cal:today_holiday' %}">Свята</a>
         </li>
-         {% if request.user.is_authenticated %}
-          <li class="nav-item {% if request.resolver_match.url_name == 'admin:index' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'admin:index' %}">Адмін</a>
-          </li>
+        <li
+          class="nav-item {% if request.resolver_match.url_name == 'psalm_list' and request.resolver_match.app_name == 'cal' %}active{% endif %}">
+          <a class="nav-link" href="{% url 'psalms:psalm_list' %}">Псалми</a>
+        </li>
+        {% if request.user.is_authenticated %}
+        <li class="nav-item {% if request.resolver_match.url_name == 'admin:index' %}active{% endif %}">
+          <a class="nav-link" href="{% url 'admin:index' %}">Адмін</a>
+        </li>
         {% endif %}
         {% if request.user.is_authenticated %}
-          <li class="nav-item {% if request.resolver_match.url_name == 'admin:logout' %}active{% endif %}">
-            <form method="post" action="{% url 'logout' %}" style="display: inline;">
-              {% csrf_token %}
-              <button type="submit" class="btn btn-link nav-link">Вихід</button>
+        <li class="nav-item {% if request.resolver_match.url_name == 'admin:logout' %}active{% endif %}">
+          <form method="post" action="{% url 'logout' %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-link nav-link">Вихід</button>
           </form>
-          </li>
+        </li>
         {% else %}
-          <li class="nav-item {% if request.resolver_match.url_name == 'admin:login' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'login' %}">Вхід</a>
-          </li>
-        {% endif %}       
+        <li class="nav-item {% if request.resolver_match.url_name == 'admin:login' %}active{% endif %}">
+          <a class="nav-link" href="{% url 'login' %}">Вхід</a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </nav>
