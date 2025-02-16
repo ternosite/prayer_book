@@ -44,10 +44,6 @@
 /* start prayer_detail */
 
 .section_text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 500px;
   width: 100%;
 }

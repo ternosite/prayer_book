@@ -1,0 +1,35 @@
+{% extends 'layout/basic.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'psalms/style.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+<div class="section">
+    <div class="section_list">
+        <ul>
+            {% for psalm in psalms %}
+            <div class="section_item">
+                <li>
+                    <a href="{% url 'psalms:psalm_detail' psalm.pk %}">
+                        <h3>{{ psalm.name }}</h3>
+                        <p>{{ psalm.text|truncatechars:30 }}</p>
+                    </a>
+                </li>
+            </div>
+            {% empty %}
+            <p>немає псалмів для відображення</p>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="section_btn">
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'psalms:add_psalm' %}" class="btn btn-outline-custom">додати псалом</a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}

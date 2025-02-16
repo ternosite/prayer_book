@@ -26,5 +26,6 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('texty/', include('texty.urls')),
     path('cal/', include('cal.urls')),
+    path('psalms/', include('psalms.urls')),
     path('', PrayerListView.as_view(), name='home'),
 ]

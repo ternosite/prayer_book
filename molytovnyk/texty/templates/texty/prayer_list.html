@@ -8,15 +8,7 @@
 
 {% block content %}
 <div class="section">
-    <!-- рядок пошуку -->
-    <!-- <form method="get" action="{% url 'texty:prayer_list' %}" class="search-form">
-        <input type="text" name="q" placeholder="Пошук молитви" value="{{ request.GET.q }}" class="form-control">
-        <button type="submit" class="btn btn-primary">Пошук</button>
-    </form> -->
-
-    <!-- <div class="section_title">
-        <h2>список молитов</h2>
-    </div>     -->
+    
     <div class="section_list">
         <ul>
             {% for prayer in prayers %}
@@ -38,8 +30,9 @@
             <a href="{% url 'texty:add_prayer' %}" class="btn btn-outline-custom">додати молитву</a>
         {% endif %}
     </div>
-   
+    
 </div>
+
 
 {% endblock content %}
 
