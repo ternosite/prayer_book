@@ -10,7 +10,9 @@
 <div class="section">   
     <div class="section_text">
         <h3>{{ prayer.name }}</h3>
-        <p>{{ prayer.text|linebreaks }}</p>
+        <div class="erapper_prayer">
+            <p>{{ prayer.text|linebreaks }}</p>
+        </div>        
     </div>    
     <div class="section_btn">
         <a href="{% url 'texty:prayer_list' %} " class="btn btn-primery btn-outline-custom">назад до списку</a>

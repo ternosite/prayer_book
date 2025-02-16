@@ -3,24 +3,20 @@
 {% load static %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'texty/style.css' %}">
+    <link rel="stylesheet" href="{% static 'psalms/style.css' %}">
 {% endblock styles %}
 
 {% block content %}
 
-
-
 <div class="form-container">
-    <h2>Нова молитва</h2>
+    <h2>Новий псалом</h2>
 
     <form action="" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.as_p }}  
         <button class="btn btn-form btn-primery btn-outline-custom">Зберегти</button>
     </form>
-    <a href="{% url 'texty:prayer_list' %} " class="btn btn-primery btn-outline-custom">назад до списку</a>
+    <a href="{% url 'psalms:psalm_list' %} " class="btn btn-primery btn-outline-custom">назад до списку</a>
 </div>
-
-
 
 {% endblock content %}

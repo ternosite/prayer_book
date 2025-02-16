@@ -1,0 +1,21 @@
+{% extends 'layout/basic.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'psalms/style.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+<div class="section">
+    <div class="section_text">
+        <h3>{{ psalm.name }}</h3>
+        <p>{{ psalm.text|linebreaks }}</p>
+    </div>
+    <div class="section_btn">
+        <a href="{% url 'psalms:psalm_list' %}" class="btn btn-primery btn-outline-custom">назад до списку</a>
+    </div>
+</div>
+
+{% endblock content %}
