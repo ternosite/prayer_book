@@ -35,11 +35,13 @@
 {% if next_holidays %}
     <ul>
         {% for holiday in next_holidays %}
-            <li><strong>{{ holiday.date }}</strong> — {{ holiday.name }}</li>
+            <li><strong>{{ holiday.date }}</strong> 
+                <p> {{ holiday.name }}</p>               
+            </li>
         {% endfor %}
     </ul>
 {% else %}
-    <p>Нет ближайших праздников.</p>
+    <p>записи про свята в базі відсутні</p>
 {% endif %}
 
 {% if request.user.is_authenticated %}

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&mq47ntz2-948*lpw^3=%ivobz#eo#tpf*zh+a1s3o4^^g@h3#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['emanresu.pythonanywhere.com']
 
@@ -124,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Общая папка static
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   # Для collectstatic
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   # Для collectstatic
 STATIC_ROOT = '/home/emanresu/static'
 
 MEDIA_URL = 'madia/'

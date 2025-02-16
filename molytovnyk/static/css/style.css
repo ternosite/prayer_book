@@ -46,6 +46,47 @@ a {
     stroke: #6894A1 1px solid;
 }
 
+/* кастомні смужки кнопки меню */
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: none !important; /* Прибираємо стандартний SVG */
+    width: 25px;
+    height: 3px;
+    background-color: #C3B59B; /* Задаємо свій колір */
+    position: relative;
+}
+
+.custom-toggler .navbar-toggler-icon::before,
+.custom-toggler .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #C3B59B; /* Задаємо свій колір */
+    display: block;
+}
+
+.custom-toggler .navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.custom-toggler .navbar-toggler-icon::after {
+    top: 8px;
+}
+
+.custom-toggler {
+    outline: none !important; /* Прибирає обводку при фокусі */
+    box-shadow: none !important; /* Прибирає тінь */
+}
+
+.custom-toggler:focus {
+    outline: none !important; /* Додаткова гарантія */
+    box-shadow: none !important; /* Додаткова гарантія */
+}
+
+
+/* кінець кастомні смужки кнопки меню */
+
 .navbar-brand img {
     margin-right: 10px;
 }
@@ -54,9 +95,9 @@ a {
     color: #C3B59B;
     font-family: Roboto Serif;
     font-weight: 900;
-    font-size: 28;
-    line-height: 31px;
-    letter-spacing: 5px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     border-left: 3px solid #C3B59B;
     padding-left: 10px;
@@ -153,4 +194,6 @@ a {
     }
 }
 
-@media(max-width: 520px) {}
+@media(max-width: 520px) {
+   
+}
