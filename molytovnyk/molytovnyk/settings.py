@@ -135,3 +135,7 @@ MEDIA_ROOT = '/home/emanresu/media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Закриває сесію при закритті браузера
+SESSION_COOKIE_SECURE = False  # Вимкни, якщо немає HTTPS (на продакшені має бути True)
+SESSION_SAVE_EVERY_REQUEST = True  # Оновлює сесію при кожному запиті
