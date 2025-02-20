@@ -13,6 +13,9 @@ class Holiday(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата створення")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Дата останнього оновлення")
 
+    def get_absolute_url(self):
+        return "/holidays/"  # всі свята на одній сторінці
+
 
     # def should_announce(self):
     #     """
