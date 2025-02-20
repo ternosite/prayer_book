@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'texty',
     'cal',
     'psalms',
+    'django.contrib.sitemaps'
 ]
 
 MIDDLEWARE = [

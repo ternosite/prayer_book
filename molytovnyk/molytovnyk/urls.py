@@ -19,6 +19,8 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.views import LogoutView     
 from django.urls import include, path
 from texty.views import PrayerListView
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import sitemaps
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +30,5 @@ urlpatterns = [
     path('cal/', include('cal.urls')),
     path('psalms/', include('psalms.urls')),
     path('', PrayerListView.as_view(), name='home'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
