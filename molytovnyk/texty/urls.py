@@ -8,5 +8,5 @@ app_name = 'texty'
 urlpatterns = [
     path('', PrayerListView.as_view(), name='prayer_list'), 
     path('add', add_prayer, name='add_prayer'),
-    path('texty/<int:pk>/', PrayerDetailView.as_view(), name='prayer_detail'),
+    path('<int:pk>/', PrayerDetailView.as_view(), name='prayer_detail'),
 ]
