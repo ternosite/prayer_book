@@ -1,37 +1,32 @@
 from django.contrib.sitemaps import Sitemap
-from cal.models import Holiday
+from django.urls import reverse
 from psalms.models import Psalm
 from texty.models import Prayer
 
-class HolidaySitemap(Sitemap):
+class PsalmSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.8
 
     def items(self):
-        return Holiday.objects.all()
-
-    def lastmod(self, obj):
-        return obj.updated_at
-
-class PsalmSitemap(Sitemap):
-    changefreq = "weekly"
-    priority = 0.6
-
-    def items(self):
         return Psalm.objects.all()
 
-    def lastmod(self, obj):
-        return obj.updated_at
+    def location(self, obj):
+        return obj.get_absolute_url()
+
 
 class PrayerSitemap(Sitemap):
     changefreq = "weekly"
-    priority = 0.7
+    priority = 0.8
 
     def items(self):
         return Prayer.objects.all()
 
+    def location(self, obj):
+        return obj.get_absolute_url()
+
+
+
 sitemaps = {
-    'holidays': HolidaySitemap(),
     'psalms': PsalmSitemap(),
-    'prayers': PrayerSitemap(),
+    'texty': PrayerSitemap(),
 }

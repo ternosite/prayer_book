@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-from django.utils import timezone
+# from django.utils import timezone
 # from datetime import timedelta, date
 
 
@@ -16,14 +16,7 @@ class Holiday(models.Model):
     def get_absolute_url(self):
         return "/holidays/"  # всі свята на одній сторінці
 
-
-    # def should_announce(self):
-    #     """
-    #     Перевіряє чи потрібно анонсувати свято за день до його настання
-    #     """
-    #     today = date.today()
-    #     return today == self.date - timedelta(days=1)
-
+   
     class Meta:
         verbose_name = "Свято"
         verbose_name_plural = "Свята"

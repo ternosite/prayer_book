@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Prayer(models. Model):
@@ -6,6 +7,10 @@ class Prayer(models. Model):
     text = models.TextField(verbose_name="Текст молитви",
                             error_messages={'blank': 'Це поле обов"язкове для заповнення.'}
                             )
+    
+
+    def get_absolute_url(self):
+        return reverse('texty:prayer_detail', args=[self.pk])
     
     class Meta:
         verbose_name = "Молитва"
