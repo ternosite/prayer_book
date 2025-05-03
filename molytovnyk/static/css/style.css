@@ -4,6 +4,15 @@ html {
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main.flex-fill {
+    flex: 1 0 auto;
+}
+
 *,
 *::after,
 *::before {
@@ -176,6 +185,61 @@ a {
     /* Цвет текста плейсхолдера */
     opacity: 0.8;
     /* Прозрачность */
+}
+
+.about-section{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;            /* або наприклад 100vh */
+    padding: 20px;
+}
+
+.title-about{
+    font-size: 2.18rem;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.text-about{
+    font-size: 18px;
+    font-weight: 500;
+    text-indent: 15px;
+}
+
+.footer {
+    background-color: #283347;
+    font-size: 0.87rem;
+    color: #C3B59B;
+    font-weight: normal;
+    border-top: 1px solid #e9ecef;
+}
+
+.mail a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer.footer {
+    flex-shrink: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body > .d-flex {
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+}
+
+main.flex-fill {
+    flex: 1;
 }
 
 

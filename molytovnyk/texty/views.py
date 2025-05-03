@@ -26,6 +26,10 @@ class PrayerDetailView(DetailView):
     context_object_name = 'prayer'
 
 
+def about_view(request):
+    return render(request, 'about.html')
+
+
 
 
 

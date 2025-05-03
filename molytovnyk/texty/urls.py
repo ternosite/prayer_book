@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PrayerListView, add_prayer, PrayerDetailView
+from .views import PrayerListView, add_prayer, PrayerDetailView, about_view
 
 
 
